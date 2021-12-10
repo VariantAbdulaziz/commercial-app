@@ -1,0 +1,15 @@
+
+.card{
+    flex: display;
+    margin: 1em 1em;
+    float: left;
+}
+
+.card-img-top{
+    width: 7em;
+    height: 5em;
+}
+
+input{
+    margin-bottom: 1em;
+}
