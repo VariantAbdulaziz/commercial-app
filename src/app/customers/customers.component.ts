@@ -27,7 +27,7 @@ export class CustomersComponent implements OnInit {
   }
 
   openProfile(idIn: number) {
-    this.selectedId = idIn;
+    this.router.navigateByUrl('customers/' + idIn)
   }
   
   onCloseHandled() {

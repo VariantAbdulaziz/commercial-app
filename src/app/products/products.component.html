@@ -1,3 +1,7 @@
+
+<div class="bt">
+  <button type="button" class="btn btn-info btn-lg" (click)="openModal()">+ add Product</button>
+</div>
 <div class="container">
   <div class="card" *ngFor="let product of products" style="width: 18rem;">
     <div class="card-img"><img [src]="product.imageUrl" class="card-img-top" alt="..."></div>
@@ -6,15 +10,11 @@
       <p class="card-text" *ngIf="product.price < 10">${{ product.price }} (*On Discount)</p>
       <p class="card-text" *ngIf="product.price >= 10">${{ product.price }}</p>
       <p class="card-text">{{product.description}}</p>
-      <button type="button" class="btn btn-primary" (click)="onViewDetail(product.id)">view detail</button>
-      <button type="button" class="btn btn-primary" (click)="delete(product.id)">DELETE</button>
+      <button type="button" class="btn btn-primary" (click)="onViewDetail(product.id)">update product</button>
+      <button type="button" class="btn btn-primary bg-danger" (click)="delete(product.id)">DELETE</button>
     </div>
   </div>
-  <div class="card bt">
-    <button type="button" class="btn btn-info btn-lg" (click)="openModal()">+</button>
-  </div>
 </div>
-
 
 
 <div class="modal" tabindex="-1" role="dialog"  [ngStyle]="{'display':display}">
@@ -51,6 +51,3 @@
     </div>
   </div>
 </div>
-
-
-

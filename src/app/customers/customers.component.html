@@ -1,3 +1,6 @@
+<div class="bt">
+  <button type="button" class="btn btn-info btn-lg" (click)="openAdd()">+ add Customer</button>
+</div>
 <div class="container">
   <div class="card" *ngFor="let customer of customers" style="width: 18rem;">
       <div class="card-img"><img [src]="customer.imageUrl" class="card-img-top" alt="..."></div>
@@ -5,11 +8,8 @@
         <h5 class="card-title">{{customer.firstName | titlecase }} {{customer.lastName | titlecase }}</h5>
         <p class="card-text">{{ customer.bio }}</p>
         <button type="button" class="btn btn-primary" (click)="openProfile(customer.id)">view customer</button>
-        <button type="button" class="btn btn-primary" (click)="delete(customer.id)">DELETE</button>
+        <button type="button" class="btn btn-primary bg-danger" (click)="delete(customer.id)">DELETE</button>
       </div>
-  </div>
-  <div class="card bt">
-    <button type="button" class="btn btn-info btn-lg" (click)="openAdd()">+</button>
   </div>
 </div>
 
@@ -40,8 +40,8 @@
             </div>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-primary">Add</button>
-          <button type="button" class="btn btn-primary" (click)="onCloseHandled()" >Cancle</button>
+          <button type="submit" class="btn">Add</button>
+          <button type="button" class="btn" (click)="onCloseHandled()" >Cancle</button>
         </div>
       </form>
     </div>

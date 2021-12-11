@@ -1,0 +1,22 @@
+.container{
+    width: 25%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em 1em;
+}
+
+.btn{
+    border-color: rgb(255, 115, 0);
+    background-color: rgb(255, 115, 0);
+    float: right;
+}
+
+.namefield{
+    width: 45%;
+    float: left;
+    margin-right: 1em;
+}
+
+.mb-3{
+    clear: left;
+}

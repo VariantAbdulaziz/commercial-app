@@ -10,9 +10,10 @@ import { Product, PRODUCTS} from './products.objects'
 })
 export class ProductsComponent implements OnInit {
 
+
   products = PRODUCTS;
   display = "none";
-  newProduct: Product = {id: 0, name: '', price: 0,imageUrl: '', description: ''};
+  newProduct: Product = {id: 0, name: '', price: 0,imageUrl: 'assets/images/puma.png', description: ''};
 
   constructor(private router: Router) { }
 
@@ -50,4 +51,5 @@ export class ProductsComponent implements OnInit {
     }
     this.router.navigateByUrl('')
   }
+
 }

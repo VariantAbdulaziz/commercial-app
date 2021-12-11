@@ -27,6 +27,13 @@ export const PRODUCTS: Product[] = [
     price: 25,
     imageUrl: "assets/images/jordan.jpg",
     description: "this is the shoe that you always dreamed of having!",
-  }
+  },
+  {
+    id: 4,
+    name: "jordan-v1.0",
+    price: 2,
+    imageUrl: "assets/images/jordan.jpg",
+    description: "this is the shoe that you always dreamed of having!",
+  },
 
 ];

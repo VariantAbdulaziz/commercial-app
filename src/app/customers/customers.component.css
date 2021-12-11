@@ -1,21 +1,21 @@
 .container{
+    clear: right;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    height: fit-content;
+    justify-content: baseline;
 }
 
 .card{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    height: 100%;
+    width: 90%;
     padding: 1em 1em;
     margin: 1em 1em;
     box-shadow: 0.5em 0.5em 0.5em gray;
 }
 
+
 .card-body{
-    box-sizing: content-box;
+    float: left;
 }
 
 .bt{
@@ -24,7 +24,7 @@
 }
 
 .card-img{
-    height: 30%;
+    height: 100%;
     float: left;
     margin-bottom: 5%;
 }
@@ -39,7 +39,23 @@
     background-color: rgb(255, 115, 0);
 }
 
+
+.bg-danger{
+    border-color: red;
+}
+
+.btn-primary{
+    padding: 0.2em;
+    margin-right: 1em;
+}
+
 .close{
     background-color: white;
     border: none;
+}
+
+.bt{
+    float: right;
+    padding: 0.3em 0.3em;
+    margin: 2em 2em;
 }
