@@ -27,7 +27,12 @@ export class ProductsComponent implements OnInit {
   }
 
   delete(id: number){
-    delete PRODUCTS[id];
+    for (let i = 0; i < this.products.length; i++) {
+      if (this.products[i].id == id) {
+        this.products.splice(i, 1);
+        break;
+      }
+    }
     this.router.navigateByUrl('')
   }
 }

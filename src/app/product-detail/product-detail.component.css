@@ -1,4 +1,12 @@
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .card{
+    width: 25%;
+    height: 100%;
     margin: 2em 2em;
 }
 
@@ -8,4 +16,6 @@
 
 .btn{
     margin: 1em 1em;
+    background-color: rgb(255, 115, 0);
+    border-color: rgb(255, 115, 0);
 }
