@@ -1,1 +1,50 @@
-<p>customers works!</p>
+<div class="container">
+  <div class="card" *ngFor="let customer of customers" style="width: 18rem;">
+      <div class="card-img"><img [src]="customer.imageUrl" class="card-img-top" alt="..."></div>
+      <div class="card-body">
+        <h5 class="card-title">{{customer.firstName | titlecase }} {{customer.lastName | titlecase }}</h5>
+        <p class="card-text">{{ customer.bio }}</p>
+        <button type="button" class="btn btn-primary" (click)="openProfile(customer.id)">view customer</button>
+        <button type="button" class="btn btn-primary" (click)="delete(customer.id)">DELETE</button>
+      </div>
+  </div>
+  <div class="card bt">
+    <button type="button" class="btn btn-info btn-lg" (click)="openAdd()">+</button>
+  </div>
+</div>
+
+<div class="modal" id="addcustomer" tabindex="-1" role="dialog"  [ngStyle]="{'display':displayAdd}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form (ngSubmit)="add(f)" #f=ngForm>
+        <div class="modal-header">
+          <h4 class="modal-title">Add Product</h4>
+          <button type="button" class="close" aria-label="Close" (click)="onCloseHandled()"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3" id="namefield">
+              <input ngModel type="text" class="form-control" placeholder="First Name" name="firstname" #name="ngModel">
+              <input ngModel type="text" class="form-control" placeholder="Last Name" name="firstname" #name="ngModel">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Birth Date</label>
+              <input ngModel type="date" class="form-control" name="bithdate" #name="ngModel">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Bio</label>
+              <textarea ngModel type="" class="form-control" name="bio" #name="ngModel">bio</textarea>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">choose image</label>
+              <input ngModel type="file" class="form-control" name="imageurl" #name="ngModel">
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Add</button>
+          <button type="button" class="btn btn-primary" (click)="onCloseHandled()" >Cancle</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Product, PRODUCTS} from './products.objects'
 
@@ -10,7 +11,8 @@ import { Product, PRODUCTS} from './products.objects'
 export class ProductsComponent implements OnInit {
 
   products = PRODUCTS;
-  newProduct: Product | undefined;
+  display = "none";
+  newProduct: Product = {id: 0, name: '', price: 0,imageUrl: '', description: ''};
 
   constructor(private router: Router) { }
 
@@ -22,8 +24,21 @@ export class ProductsComponent implements OnInit {
     this.router.navigateByUrl('/products/detail/'+id);
   }
 
-  add(){
-    
+  add(productIn: NgForm){
+    this.newProduct.name = productIn.value.name;
+    this.newProduct.price = productIn.value.price;
+    this.newProduct.description = productIn.value.description;
+    this.newProduct.id = this.products.length + 1;
+    this.products.push(this.newProduct);
+    this.router.navigateByUrl('');
+    this.onCloseHandled();
+  }
+
+  openModal() {
+    this.display = "block";
+  }
+  onCloseHandled() {
+    this.display = "none";
   }
 
   delete(id: number){

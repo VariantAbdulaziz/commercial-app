@@ -26,9 +26,9 @@ export class ProductDetailComponent implements OnInit {
     )
   }
 
-  updateProduct(input: NgForm): void {
-    this.selectedProduct.name = input.value.name
-    this.selectedProduct.price = input.value.price
+  updateProduct(updateIn: NgForm): void {
+    this.selectedProduct.name = updateIn.value.name
+    this.selectedProduct.price = updateIn.value.price
     this.router.navigateByUrl('');
   }
 

@@ -1,32 +1,36 @@
-export interface Product{
+export interface Customer{
     id: number;
     firstName: string;
     lastName: string;
     birthDate: string;
     bio: string;
+    imageUrl: string;
 }
 
-export const PRODUCTS: Product[] = [
+export const CUSTOMERS: Customer[] = [
   {
     id: 1,
-    firstName: "abebe",
-    lastName: "",
+    firstName: "beimnet",
+    lastName: "abebe",
     birthDate: "12/12/12",
-    bio: "",
+    bio: "this is a typical bio i want to add to demonstate that the bio work",
+    imageUrl: "assets/images/pro-thumbnail.png"
   },
   {
     id: 2,
-    firstName: "chala",
-    lastName: "",
+    firstName: "kirubel",
+    lastName: "tariku",
     birthDate: '12/12/12',
-    bio: "",
+    bio: "this is a typical bio i want to add to demonstate that the bio work",
+    imageUrl: "assets/images/pro-thumbnail.png"
   },
   {
     id: 3,
-    firstName: "kebede",
-    lastName: "",
+    firstName: "abel",
+    lastName: "kebede",
     birthDate: "12/12/12",
-    bio: "",
-  }
+    bio: "this is a typical bio i want to add to demonstate that the bio work",
+    imageUrl: "assets/images/pro-thumbnail.png"
+  },
 
 ];
