@@ -3,6 +3,7 @@
     flex: display;
     margin: 1em 1em;
     float: left;
+    box-shadow: inset;
 }
 
 .card-img-top{
@@ -12,4 +13,14 @@
 
 input{
     margin-bottom: 1em;
+}
+
+.butt{
+    border: none;
+}
+
+.btn{
+    margin-right: 1em;
+    justify-content: center;
+    height: 100%;
 }

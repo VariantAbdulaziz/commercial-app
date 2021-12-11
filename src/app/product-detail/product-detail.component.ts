@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { NgForm } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { PRODUCTS } from '../products/products.objects';
 
 @Component({
@@ -13,7 +14,7 @@ export class ProductDetailComponent implements OnInit {
   products = PRODUCTS;
   
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(
@@ -25,8 +26,10 @@ export class ProductDetailComponent implements OnInit {
     )
   }
 
-  updateDetail(): void {
-    
+  updateProduct(input: NgForm): void {
+    this.selectedProduct.name = input.value.name
+    this.selectedProduct.price = input.value.price
+    this.router.navigateByUrl('');
   }
 
 }

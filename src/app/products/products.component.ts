@@ -10,6 +10,7 @@ import { Product, PRODUCTS} from './products.objects'
 export class ProductsComponent implements OnInit {
 
   products = PRODUCTS;
+  newProduct: Product | undefined;
 
   constructor(private router: Router) { }
 
@@ -19,5 +20,14 @@ export class ProductsComponent implements OnInit {
 
   onViewDetail(id: number){
     this.router.navigateByUrl('/products/detail/'+id);
+  }
+
+  add(){
+    
+  }
+
+  delete(id: number){
+    delete PRODUCTS[id];
+    this.router.navigateByUrl('')
   }
 }

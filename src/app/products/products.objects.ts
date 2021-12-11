@@ -10,7 +10,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 1,
     name: "nike",
-    price: 2560,
+    price: 60,
     imageUrl: "assets/images/nike.jpeg",
     description: "this is the shoe that you always dreamed of having!",
   },
@@ -24,7 +24,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 3,
     name: "jordan",
-    price: 2560,
+    price: 25,
     imageUrl: "assets/images/jordan.jpg",
     description: "this is the shoe that you always dreamed of having!",
   }
